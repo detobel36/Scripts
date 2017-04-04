@@ -2,8 +2,8 @@
 Voici quelques petits scripts pouvant être utile.
 
 - [findWorld](#findwordsh)
-- [compilerASM](#compilerasm)
-- [compilerASM2](#compilerasm2)
+- [compilerASM](#compilerasmpy)
+- [compilerASM2](#compilerasm2py)
 
 
 ## findWord.sh
