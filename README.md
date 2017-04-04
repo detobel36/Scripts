@@ -1,9 +1,12 @@
 # Script
 Voici quelques petits scripts pouvant être utile.
 
-- [findWorld](#findwordsh)
-- [compilerASM](#compilerasmpy)
-- [compilerASM2](#compilerasm2py)
+- [findWorld (`bash`)](#findwordsh)
+- [compilerASM (`python`)](#compilerasmpy)
+- [compilerASM2 (`python`)](#compilerasm2py)
+- [compilerASM (`bash`)](#compilerasmsh)
+
+-------------------------------
 
 
 ## findWord.sh
@@ -22,16 +25,23 @@ Quel mot voulez-vous trouver: test
 39.         echo "Test de connexion au serveur $i"
 ```
 
+
+-------------------------------
+
+
 ## compilerASM.py
 Permet de compiler un fichier de code asm afin de l'exécuter.        
-Pour être utilisé, ce script à besoin du fichier IO.cpp mis à disposition par l'ULB à ses étudiants
-sur l'université virtuel.
+Pour être utilisé, ce script à besoin du fichier IO.cpp (qui doit être dans le même dossier) mis à 
+disposition par l'ULB à ses étudiants sur l'université virtuel.
 
 #### Utilisation
 ```BASH
 python3 compilerASM.py <nom du fichier>
 ```
 Il faut mettre le nom du fichier sans l'extention (`.asm`).
+
+
+-------------------------------
 
 
 ## compilerASM2.py
@@ -42,4 +52,21 @@ fichier.
 ```BASH
 python3 compilerASM2.py
 ```
+
+
+-------------------------------
+
+
+
+## compilerASM.sh
+Permet de compiler un fichier de code asm afin de l'exécuter.        
+Pour être utilisé, ce script à besoin du fichier IO.cpp (quoi doit être dans le même dossier) mis à 
+disposition par l'ULB à ses étudiants sur l'université virtuel.
+
+#### Utilisation
+```BASH
+./compilerASM.sh <nom du fichier>
+```
+Il faut mettre le nom du fichier sans l'extention (`.asm`).
+
 
