@@ -10,7 +10,7 @@ Voici quelques petits scripts pouvant être utile.
 -------------------------------
 
 
-## findWord.sh
+## [findWord.sh](findWord.sh)
 Permet de retrouver un mot dans un dossier.
 
 #### Utilisation
@@ -28,7 +28,7 @@ entre crochet) pour le sélectionner, ne mettez aucun chemin.
 -------------------------------
 
 
-## compilerASM.py
+## [compilerASM.py](compilerASM.py)
 Permet de compiler un fichier de code asm afin de l'exécuter.        
 Pour être utilisé, ce script à besoin du fichier IO.cpp (qui doit être dans le même dossier) mis à 
 disposition par l'ULB à ses étudiants sur l'université virtuel.
@@ -43,7 +43,7 @@ Il faut mettre le nom du fichier sans l'extention (`.asm`).
 -------------------------------
 
 
-## compilerASM2.py
+## [compilerASM2.py](compilerASM2.py)
 Même utilité que `compilerASM.py` mais avec une interface graphique Tkinter pour sélectionner le bon
 fichier.
 
@@ -57,7 +57,7 @@ python3 compilerASM2.py
 
 
 
-## compilerASM.sh
+## [compilerASM.sh](compilerASM.sh)
 Permet de compiler un fichier de code asm afin de l'exécuter.        
 Pour être utilisé, ce script à besoin du fichier IO.cpp (quoi doit être dans le même dossier) mis à 
 disposition par l'ULB à ses étudiants sur l'université virtuel.
@@ -83,7 +83,7 @@ Il faut mettre le nom du fichier sans l'extention (`.asm`).
 
 -------------------------------
 
-## serveursULB.sh
+## [serveursULB.sh](serveursULB.sh)
 Script permettant de se connecter plus facilement aux serveurs de l'ULB.            
 [Plus d'informations](http://cs.ulb.ac.be/public/salles/faq)        
 
