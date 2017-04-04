@@ -80,3 +80,40 @@ Quel est le nom du fichier que vous voulez compiler (sans le .asm)
 Il faut mettre le nom du fichier sans l'extention (`.asm`).
 
 
+-------------------------------
+
+## server.sh
+Script permettant de se connecter plus facilement aux serveurs de l'ULB.            
+[Plus d'informations](http://cs.ulb.ac.be/public/salles/faq)        
+
+#### Utilisation:
+```BASH
+./server.sh 
+Connexion à un serveur de l'ULB: 
+
+
+ UUUUUUUU     UUUUUUUU     LLLLLLLLLLL                  BBBBBBBBBBBBBBBBB   
+ U::::::U     U::::::U     L:::::::::L                  B::::::::::::::::B  
+ U::::::U     U::::::U     L:::::::::L                  B::::::BBBBBB:::::B 
+ UU:::::U     U:::::UU     LL:::::::LL                  BB:::::B     B:::::B
+  U:::::U     U:::::U        L:::::L                      B::::B     B:::::B
+  U:::::D     D:::::U        L:::::L                      B::::B     B:::::B
+  U:::::D     D:::::U        L:::::L                      B::::BBBBBB:::::B 
+  U:::::D     D:::::U        L:::::L                      B:::::::::::::BB  
+  U:::::D     D:::::U        L:::::L                      B::::BBBBBB:::::B 
+  U:::::D     D:::::U        L:::::L                      B::::B     B:::::B
+  U:::::D     D:::::U        L:::::L                      B::::B     B:::::B
+  U::::::U   U::::::U        L:::::L         LLLLLL       B::::B     B:::::B
+  U:::::::UUU:::::::U      LL:::::::LLLLLLLLL:::::L     BB:::::BBBBBB::::::B
+   UU:::::::::::::UU       L::::::::::::::::::::::L     B:::::::::::::::::B 
+     UU:::::::::UU         L::::::::::::::::::::::L     B::::::::::::::::B  
+       UUUUUUUUU           LLLLLLLLLLLLLLLLLLLLLLLL     BBBBBBBBBBBBBBBBB   
+
+Attention, le programme ne s'arrete pas encore tout seul si aucun serveur n'a été trouvé
+
+Quel est votre NetID ?
+<votre netid>
+Connexion réussie pour le serveur 1
+test@romeo1.ulb.ac.be's password: <votre mot de passe>
+```
+
