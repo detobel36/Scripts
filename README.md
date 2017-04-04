@@ -5,6 +5,7 @@ Voici quelques petits scripts pouvant être utile.
 - [compilerASM (`python`)](#compilerasmpy)
 - [compilerASM2 (`python`)](#compilerasm2py)
 - [compilerASM (`bash`)](#compilerasmsh)
+- [serveursULB (`bash`)](#serveursulbsh)
 
 -------------------------------
 
@@ -82,13 +83,13 @@ Il faut mettre le nom du fichier sans l'extention (`.asm`).
 
 -------------------------------
 
-## server.sh
+## serveursULB.sh
 Script permettant de se connecter plus facilement aux serveurs de l'ULB.            
 [Plus d'informations](http://cs.ulb.ac.be/public/salles/faq)        
 
 #### Utilisation:
 ```BASH
-./server.sh 
+./serveursULB.sh 
 Connexion à un serveur de l'ULB: 
 
 
