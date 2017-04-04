@@ -17,13 +17,11 @@ Permet de retrouver un mot dans un dossier.
 ./findWord.sh 
 Ce script vous permet de trouver un mot dans tous les fichiers d'un dossier
 
-Dossier/fichier à analyser [./Script]: 
-Quel mot voulez-vous trouver: test
-/home/remy/Bureau/Script/server.sh
-43.         echo "Test de connexion au serveur $i"
-/home/remy/Bureau/Script/test.sh
-39.         echo "Test de connexion au serveur $i"
+Dossier/fichier à analyser [./Script]: <chemin du dossier à analyser>
+Quel mot voulez-vous trouver: <mot recherché>
 ```
+Par défaut le chemin du dossier à analyser sera celui dans lequelle vous vous trouvez (affiché 
+entre crochet) pour le sélectionner, ne mettez aucun chemin.
 
 
 -------------------------------
@@ -65,7 +63,19 @@ disposition par l'ULB à ses étudiants sur l'université virtuel.
 
 #### Utilisation
 ```BASH
-./compilerASM.sh <nom du fichier>
+./compilerASM.sh 
+Compilation de fichier assembleur: 
+
+                                  _     _                 
+     /\                          | |   | |                
+    /  \   ___ ___  ___ _ __ ___ | |__ | | ___ _   _ _ __ 
+   / /\ \ / __/ __|/ _ \ '_ ` _ \| '_ \| |/ _ \ | | | '__|
+  / ____ \\__ \__ \  __/ | | | | | |_) | |  __/ |_| | |   
+ /_/    \_\___/___/\___|_| |_| |_|_.__/|_|\___|\__,_|_|   
+                                                          
+                                                          
+Quel est le nom du fichier que vous voulez compiler (sans le .asm)
+<nom du fichier>
 ```
 Il faut mettre le nom du fichier sans l'extention (`.asm`).
 
