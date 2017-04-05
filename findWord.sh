@@ -13,9 +13,7 @@ fi
 
 if [[ -d $filename ]] ; then
     read -p "Quel mot voulez-vous trouver: " word
-
-    # filename=$(echo $filename | sed 's/ /\\ /g')
-
+    
     fichier=""
 
     grep -nri "$word" `"${filename}"/*` | while read -r line ; do
