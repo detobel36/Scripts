@@ -26,7 +26,7 @@ echo ""
 echo "Quel est votre NetID ?"
 read netid
 
-serveur="romeo"
+serveur="romeo" # Or roxan
 
 # Initialisation
 i="0"
@@ -34,9 +34,17 @@ i="0"
 # Recherche du meilleur serveur
 while [ true ]; do
     i=$((i+1))
-    if ping -c1 -w 3 $serveur$i.ulb.ac.be > /dev/null; then
+    status=$(ssh -o BatchMode=yes -o ConnectTimeout=3 $serveur$i.ulb.ac.be echo ok 2>&1)
+
+    if [[ $status == ok ]] || [[ $status == "Permission denied"* ]] ; then
         echo "Connexion réussie pour le serveur $i"
         break;
+
+    #if ping -c1 -w 3 $serveur$i.ulb.ac.be > /dev/null; then
+    #    echo "Connexion réussie pour le serveur $i"
+    #    break;
+
+
     # elif $i > 2; then
     #     break;
     else
