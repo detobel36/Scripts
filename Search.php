@@ -1,6 +1,6 @@
 <?php
 
-function search($path) {
+function search($path, $searchWord) {
     $debug = FALSE;
     $matches = array();
     foreach (glob($path) as $search) {
@@ -11,13 +11,13 @@ function search($path) {
             if($debug) {
                 echo "<br />Dossier: " . $search . "<br />";
             }
-            $matches = array_merge($matches, search($search . "/*"));
+            $matches = array_merge($matches, search($search . "/*", $searchWord));
             if($debug) {
                 echo "<br /><br />";
             }
         } else {
             $contents = file_get_contents($search);
-            if (!strpos($contents, "bdd.phoenix-rebirth.fr") != -1) {
+            if (!strpos($contents, $searchWord) != -1) {
                 $matches[] = $search;
                 if($debug) {
                     echo "TROUVE !!!<br /><br />";
@@ -29,7 +29,7 @@ function search($path) {
     return $matches;
 }
 
-$matches = search("./*");
+$matches = search("./*", "exemple");
 
 echo "<h3>Résultats:</h3>";
 echo "<ul>";
