@@ -6,6 +6,7 @@ Voici quelques petits scripts pouvant être utile.
 - [compilerASM2 (`python`)](#compilerasm2py)
 - [compilerASM (`bash`)](#compilerasmsh)
 - [serveursULB (`bash`)](#serveursulbsh)
+- [scanWifi (`bash`)](#scanwifish)
 
 -------------------------------
 
@@ -118,3 +119,31 @@ Connexion réussie pour le serveur 1
 test@romeo1.ulb.ac.be's password: <votre mot de passe>
 ```
 
+
+-------------------------------
+
+## [scanWifi.sh](scanWifi.sh)
+Script permettant de scanner la liste des wifi et d'afficher leurs fréquences, le type de signal, 
+le type de mot de passe ainsi que le canal utilisé.          
+L'affichage est rechargé de manière régulière (configurable).  Le script affiche également le ping de
+certains sites.
+
+#### Utilisation:
+```BASH
+./scanWifi.sh 
+Google.be: 13.3 ms | Github: 99.1 ms
+==================================================================================================================================================
+                                                          Liste de balayage Wi-Fi (wlo1)
+==================================================================================================================================================
+ACTIF  SSID                            SSID-HEX                                                      CHAN  DÉBIT    SIGNAL  BARS  SÉCURITÉ    
+--------------------------------------------------------------------------------------------------------------------------------------------------
+oui    VOO-******                      564F****************                                          13    54 Mo/s  49      ▂▄__  WPA1 WPA2   
+non    VOO_HOMESPOT                    564F********************                                      13    54 Mo/s  45      ▂▄__              
+non    PROXIMUS_FON                    5052********************                                      1     54 Mo/s  37      ▂▄__              
+non    WiFi-2.4-****                   5769**********************                                    1     54 Mo/s  37      ▂▄__  WPA2        
+non    PROXIMUS_AUTO_FON               5052******************************                            1     54 Mo/s  34      ▂▄__  WPA2 802.1X 
+non    Olympe                          4F6C********                                                  5     54 Mo/s  22      ▂___  WPA2        
+non    HP-Print-AA-Officejet Pro 8620  4850********************************************************  6     54 Mo/s  20      ▂___  WPA2        
+non    WiFi-2.4-********               5769******************************                            1     54 Mo/s  19      ▂___  WPA2        
+non    PROXIMUS_FON                    5052********************                                      11    54 Mo/s  19      ▂___              
+```
