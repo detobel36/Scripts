@@ -86,7 +86,7 @@ Il faut mettre le nom du fichier sans l'extention (`.asm`).
 
 ## [serveursULB.sh](serveursULB.sh)
 Script permettant de se connecter plus facilement aux serveurs de l'ULB.            
-[Plus d'informations](http://cs.ulb.ac.be/public/salles/faq)        
+[Plus d'informations](http://padi.ulb.ac.be/v2/index.php)        
 
 #### Utilisation:
 ```BASH
