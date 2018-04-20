@@ -1,5 +1,7 @@
 #!/bin/bash
 
+MODE="PING" # "PING" or "BATCH" to check if server is on line
+
 
 echo "Connexion à un serveur de l'ULB: "
 echo ""
@@ -26,7 +28,7 @@ echo ""
 echo "Quel est votre NetID ?"
 read netid
 
-serveur="romeo" # Or roxan
+serveur="romeo" # roxan or romeo
 
 # Initialisation
 i="0"
@@ -34,22 +36,30 @@ i="0"
 # Recherche du meilleur serveur
 while [ true ]; do
     i=$((i+1))
-    status=$(ssh -o BatchMode=yes -o ConnectTimeout=3 $serveur$i.ulb.ac.be echo ok 2>&1)
 
-    if [[ $status == ok ]] || [[ $status == "Permission denied"* ]] ; then
-        echo "Connexion réussie pour le serveur $i"
-        break;
+    if [ $MODE = "PING" ]; then
+        echo "Test ping"
+        if ping -c 1 -w 3 $serveur$i.ulb.ac.be &> /dev/null ; then
+            echo "Connexion réussi pour le serveur $i"
+            break;
+        else
+            echo "[PING] Test de connexion au serveur $i"
+        fi
 
-    #if ping -c1 -w 3 $serveur$i.ulb.ac.be > /dev/null; then
-    #    echo "Connexion réussie pour le serveur $i"
-    #    break;
-
-
-    # elif $i > 2; then
-    #     break;
     else
-        echo "Test de connexion au serveur $i"
+
+        status=$(ssh -o BatchMode=yes -o ConnectTimeout=3 $serveur$i.ulb.ac.be echo ok 2>&1)
+        if [[ $status == ok ]] || [[ $status == "Permission denied"* ]] ; then
+            echo "Connexion réussie pour le serveur $i"
+            break;
+
+        else
+            echo "[BATCH] Test de connexion au serveur $i"
+        fi
+
     fi
+
+    
 done
 
 ssh -X $netid@$serveur$i.ulb.ac.be
