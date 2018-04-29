@@ -7,6 +7,7 @@ Voici quelques petits scripts pouvant être utile.
 - [compilerASM (`bash`)](#compilerasmsh)
 - [serveursULB (`bash`)](#serveursulbsh)
 - [scanWifi (`bash`)](#scanwifish)
+- [BonPatronLaTex (`python`)](#BonPatronLaTex)
 
 -------------------------------
 
@@ -147,3 +148,14 @@ non    HP-Print-AA-Officejet Pro 8620  4850*************************************
 non    WiFi-2.4-********               5769******************************                            1     54 Mo/s  19      ▂___  WPA2        
 non    PROXIMUS_FON                    5052********************                                      11    54 Mo/s  19      ▂___              
 ```
+
+## [BonPatronLaTex.py](BonPatronLaTex.py)
+Script permettant de corriger les fautes d'orthographe d'un document LaTeX (`.tex`) en utilisant le site [http://bonpatron.com/](BonPatron.com)
+
+### Utilisation
+```
+python3 BonPatronLaTex.py
+python3 BonPatronLaTex.py <fichier LaTeX>
+```
+Si aucun paramètre n'est donné lors de l'exécution, une fenêtre tkinter sera ouverte pour permettre de choisir le fichier LaTeX.  Le nom du fichier LaTeX à corrigé peut être mis en paramètre et sera donc corrigé par le site web.            
+Le résultat de cette correction sera stocké dans un fichier `result.html` placé dans le même dossier que le script python.  Ce fichier sera lancé automatiquement **ainsi** que la page web de BonPatron (pour afficher les publicités présente sur le site, qui infine le finance).
